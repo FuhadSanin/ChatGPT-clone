@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial,Helvetica,sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-menu{
+  width: 20%;
+  height: 100vh;
+  background-color: #202123;
+  float: left;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.new-chat{
+  width: 90%;
+  height: 50px;
+  margin-top: 20px;
+  border: 0.1px solid rgba(255, 255, 255, 0.463);
+  border-radius: 5px;
+  color: white;
+  background-color: #202123;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: medium;
+  transition-duration: 0.5s;
+}
+.new-chat span{
+  padding-right: 20px;
+}
+.new-chat:hover{
+  background-color:rgba(255, 255, 255, 0.463) ;
+  font-size: large;
+}
+.right-menu{
+  width: 80%;
+  height: 100vh;
+  background-color: #4A4553;
+  float: left;
+  position: relative;
+}
+.right-menu .chatbox form{
+  padding-bottom: 50px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;right: 0;
+}
+.right-menu .chat-input-feild{
+  width: 85%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3c3a45;
+  text-align: center;
+  outline: none;
+  color: white;
+  box-shadow: 0 8px 0 0 rgba(0, 0, 0, 0.416);
+}
+
+.right-menu .chat-log{
+  width: fit-content;
+  height: fit-content;
+}
+
+.right-menu .chat-message{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 200px;
+  gap: 40px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.right-menu .avatar{
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.right-menu .avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.right-menu .chat-log.chatgpt{
+  width: 100%;
+  background-color: rgba(255,255,255,0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right-menu .avatar.chatgpt{
+  background-color: rgb(36, 165, 31);
 }
